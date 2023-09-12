@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Mapa">
+    <fragment
+        android:id="@+id/mapa"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnfcentral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="575dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/expandirfab"
+        app:backgroundTint="@color/colorTabs"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnfmapa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:visibility="invisible"
+        android:onClick="abrirMapa"
+        app:layout_constraintBottom_toTopOf="@+id/btnfcentral"
+        app:layout_constraintEnd_toStartOf="@+id/btnfcentral"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnfcentral"
+        app:srcCompat="@drawable/tabmapa"
+        app:backgroundTint="@android:color/darker_gray"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnftabs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:layout_marginEnd="43dp"
+        android:clickable="false"
+        android:visibility="invisible"
+        android:onClick="abrirTabs"
+        app:layout_constraintBottom_toTopOf="@+id/btnfcentral"
+        app:layout_constraintEnd_toEndOf="@+id/btnfcentral"
+        app:layout_constraintStart_toEndOf="@+id/btnfmapa"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/iconotabs"
+        app:backgroundTint="@color/colorTabs"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnfacercade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:layout_marginEnd="13dp"
+        android:clickable="false"
+        android:visibility="invisible"
+        android:onClick="abrirAcercaDe"
+        app:layout_constraintBottom_toTopOf="@+id/btnfcentral"
+        app:layout_constraintEnd_toStartOf="@+id/btnfinvitar"
+        app:layout_constraintStart_toEndOf="@+id/btnfcentral"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_dialog_info"
+        app:backgroundTint="@color/colorTabs"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnfinvitar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:onClick="abrirMonedero"
+        android:visibility="invisible"
+        app:backgroundTint="@color/colorTabs"
+        app:layout_constraintBottom_toTopOf="@+id/btnfcentral"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnfcentral"
+        app:layout_constraintTop_toTopOf="@+id/btnfcentral"
+        app:srcCompat="@drawable/compartir" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
